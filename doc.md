@@ -34,7 +34,7 @@ npm i @heroicons/react
 "/constants.ts" - string-iin array uusgew.
 "/typings.d.ts" - torliig ni zaaw.
 
-## 7 - Fetch News JSON from (mediastack.com)
+## 7 - Install gql from "graphql-request
 
 https://mediastack.com/
 
@@ -50,7 +50,7 @@ npm add graphql-request graphql
 4. https://mediastack.com/ -d SIGNUP hiine.
 5. API_KEY-ig ni ".env.local" dotroo huulna.
 
-## 8 - StepZen (uild GraphQL Easily Optimize & Scale GraphQL Automatically)
+## 8 - StepZen (get JSON data from mediastack using stepZen)
 
 1. https://stepzen.com/-d SIGNUP hiine.
    https://stepzen.com/getting-started
@@ -67,4 +67,42 @@ npm install -g stepzen
 stepzen init
 ```
 
-5.
+5. terminal dr ingej bichne.
+   https://stepzen.com/getting-started?details=rest
+
+```bash
+stepzen import curl "http://api.mediastack.com/v1/news?access_key=API_KEY_GOES_HERE"
+```
+
+6. terminal dr ingej bichne.
+
+```bash
+stepzen start
+```
+
+explore it with GraphiQL at "http://localhost:5001/api/NAME" iim url irne.
+
+7. terminal dr "Uri" gesen haygiig "/lib/fetchNews.ts" dotor fetch function dotor oruulna.
+   https://public03c5d3a82c067062.stepzen.net/api/NAME/__graphql
+
+8. "/app/page.tsx" fetchNews function-iig duudhad news JSON irne.
+
+## 9 - DARK MODE
+
+1. "/app/layout.tsx"--ig "body" tag-iig "/app/Providers.tsx"-aar WRAP hiine.
+2. "/app/Providers.tsx"-iig "use client" buyu "client" component-bolgono. Uchir ni "/app/layout.tsx" ni "server component".
+3. https://www.npmjs.com/package/next-themes
+
+```bash
+npm i next-themes
+```
+
+4. "/tailwind.config.js" file dotor "darkMode: 'class' " gej oruulj ogno.
+
+## 10 - React Timeago ("6days ago" etc.)
+
+```bash
+npm i -D react-timeago
+```
+
+## 11 - Deploy to VERCEL

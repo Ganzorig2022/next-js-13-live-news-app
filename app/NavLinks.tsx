@@ -7,7 +7,7 @@ const NavLinks = () => {
   const pathname = usePathname();
 
   const isActive = (path: string) => {
-    // console.log(pathname?.split('/').pop() === path);
+    //returns TRUE, FALSE
     return pathname?.split('/').pop() === path;
   };
 
